@@ -93,7 +93,7 @@ def parse_url(user_url):
                 new_url = f"{check_scheme}{i[5:-1]}"
                 all_url.append(new_url)
             else:
-                new_url = url + i[6:-1]
+                new_url = url + i[5:-1]
                 all_url.append(new_url)
         else:
 
