@@ -69,7 +69,7 @@ def parse_url(user_url):
     paths_log = re.findall(r'(path=".*?[0-9a-zA-Z.?\-_=/%#]*")', text)  # path
     mails_log = re.findall(r'([a-zA-Z0-9_]{2,}@[a-zA-Z]*\.[a-zA-Z]*)', text)  # mails
     comments_log = re.findall(r'([<!\-]{4}.*[\->]{3})', text)  # comments
-    comment_js_log_1 = re.findall(r'/\*!?[\s\S]*?\*/', text)  # comments JS
+    comment_js_log_1 = re.findall(r'\s*\n/\*!?[\s\S]*?\*\/', text)  # comments JS
     comment_js_log_3 = re.findall(r'/\*.*?\*/', text)  # comments JS
     if ".js" in url:
         comment_js_log_2 = re.findall(r"(\n\s*/{2}.+)", text)  # comments JS
