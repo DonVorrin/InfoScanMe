@@ -66,7 +66,7 @@ def parse_url(user_url):
 
     hrefs_log = re.findall(r'(href=".*?[0-9a-zA-Z.?\-_=/%#]*")', text)  # href
     src_log = re.findall(r'(src=".*?[0-9a-zA-Z.?\-_=/%#]*")', text)  # src
-    paths_log = re.findall(r'([path]{4}?=".*?[0-9a-zA-Z.?\-_=/%#]*")', text)  # path
+    paths_log = re.findall(r'(path=".*?[0-9a-zA-Z.?\-_=/%#]*")', text)  # path
     mails_log = re.findall(r'([a-zA-Z0-9_]{2,}@[a-zA-Z]*\.[a-zA-Z]*)', text)  # mails
     comments_log = re.findall(r'([<!\-]{4}.*[\->]{3})', text)  # comments
     comment_js_log_1 = re.findall(r'/\*!?[\s\S]*?\*/', text)  # comments JS
@@ -82,8 +82,12 @@ def parse_url(user_url):
                 new_url = f"{check_scheme}{i[6:-1]}"
                 all_url.append(new_url)
             else:
-                new_url = url + i[6:-1]
-                all_url.append(new_url)
+                if url[-1] != "/" or i[6:7] != "/":
+                    new_url = f"{url}/{i[6:-1]}"
+                    all_url.append(new_url)
+                else:
+                    new_url = url + i[6:-1]
+                    all_url.append(new_url)
         else:
             all_url.append(i[6:-1])
 
@@ -93,8 +97,12 @@ def parse_url(user_url):
                 new_url = f"{check_scheme}{i[5:-1]}"
                 all_url.append(new_url)
             else:
-                new_url = url + i[5:-1]
-                all_url.append(new_url)
+                if url[-1] != "/" or i[5:6] != "/":
+                    new_url = f"{url}/{i[5:-1]}"
+                    all_url.append(new_url)
+                else:
+                    new_url = url + i[5:-1]
+                    all_url.append(new_url)
         else:
 
             all_url.append(i[5:-1])
@@ -105,8 +113,12 @@ def parse_url(user_url):
                 new_url = f"{check_scheme}{i[6:-1]}"
                 all_url.append(new_url)
             else:
-                new_url = url + i[6:-1]
-                all_url.append(new_url)
+                if url[-1] != "/" or i[6:7] != "/":
+                    new_url = f"{url}/{i[6:-1]}"
+                    all_url.append(new_url)
+                else:
+                    new_url = url + i[6:-1]
+                    all_url.append(new_url)
         else:
             all_url.append(i[6:-1])
 
