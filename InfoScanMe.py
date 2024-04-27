@@ -82,7 +82,7 @@ def parse_url(user_url):
                 new_url = f"{check_scheme}{i[6:-1]}"
                 all_url.append(new_url)
             else:
-                if url[-1] != "/" or i[6:7] != "/":
+                if url[-1] != "/" and i[6:7] != "/":
                     new_url = f"{url}/{i[6:-1]}"
                     all_url.append(new_url)
                 else:
@@ -97,7 +97,7 @@ def parse_url(user_url):
                 new_url = f"{check_scheme}{i[5:-1]}"
                 all_url.append(new_url)
             else:
-                if url[-1] != "/" or i[5:6] != "/":
+                if url[-1] != "/" and i[5:6] != "/":
                     new_url = f"{url}/{i[5:-1]}"
                     all_url.append(new_url)
                 else:
@@ -113,7 +113,7 @@ def parse_url(user_url):
                 new_url = f"{check_scheme}{i[6:-1]}"
                 all_url.append(new_url)
             else:
-                if url[-1] != "/" or i[6:7] != "/":
+                if url[-1] != "/" and i[6:7] != "/":
                     new_url = f"{url}/{i[6:-1]}"
                     all_url.append(new_url)
                 else:
