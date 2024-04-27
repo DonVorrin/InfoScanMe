@@ -7,6 +7,7 @@ Scanning a web resource for URL, Comment, Mail
   import socket
 
 # Example
+```
 ┌──(kali㉿kali)-[~/WebScanVorrin]
 └─$ python3 main.py
 Example: 
@@ -28,4 +29,5 @@ https://nexaker.ru/?author=1
 /*! This file is auto-generated */
 \<!-- /Yandex.Metrika counter -->
 \<!-- Yandex.Metrika counter -->
+```
                                                                                      
