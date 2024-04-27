@@ -9,7 +9,7 @@ Scanning a web resource for URL, Comment, Mail
 # Example
 ```
 ┌──(kali㉿kali)-[~/WebScanVorrin]
-└─$ python3 main.py
+└─$ python3 InfoScanMe.py
 Example: 
         https://example.com/
 Enter URL: https://nexaker.ru
