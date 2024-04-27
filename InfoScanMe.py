@@ -59,6 +59,7 @@ def parse_url(user_url):
     except:
         url = f"http://{user_url}"
         r = requests.get(url)
+    print(f"Target: {url}")
     text = r.text
     all_url = []
     all_comment = []
