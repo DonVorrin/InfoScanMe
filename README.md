@@ -2,9 +2,9 @@
 Scanning a web resource for URL, Comment, Mail
 
 # Dependencies (Python3)
-  import requests
-  import re
-  import socket
+  - import requests
+  - import re
+  - import socket
 
 # Example
 ```
