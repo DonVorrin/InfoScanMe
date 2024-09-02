@@ -68,7 +68,7 @@ def parse_url(user_url):
     hrefs_log = re.findall(r'(href=".*?[0-9a-zA-Z.?\-_=/%#]*")', text)  # href
     src_log = re.findall(r'(src=".*?[0-9a-zA-Z.?\-_=/%#]*")', text)  # src
     paths_log = re.findall(r'(path=".*?[0-9a-zA-Z.?\-_=/%#]*")', text)  # path
-    mails_log = re.findall(r'([a-zA-Z0-9_]{2,}@[a-zA-Z]*\.[a-zA-Z]*)', text)  # mails
+    mails_log = re.findall(r'([a-zA-Z0-9_\.]{2,}@[a-zA-Z]*\.[a-zA-Z]*)', text)  # mails
     comments_log = re.findall(r'([<!\-]{4}.*[\->]{3})', text)  # comments
     comment_js_log_1 = re.findall(r'\s*\n/\*!?[\s\S]*?\*\/', text)  # comments JS
     comment_js_log_3 = re.findall(r'/\*.*?\*/', text)  # comments JS
